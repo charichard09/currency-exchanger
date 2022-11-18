@@ -1,5 +1,5 @@
 export default class ExchangeRateService {
-  static getExchangeRates() {
+  static getExchangeRates(currencyTo) {
     return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`)
       .then((response) => {
         if (!response.ok) {
@@ -9,7 +9,15 @@ export default class ExchangeRateService {
               throw new Error(errorMessage);
             });
         } else {
-          return response.json();
+          return response.json().
+            then((currencyCodeCheck) => {
+              if (Object.hasOwn(currencyCodeCheck.conversion_rates, currencyTo)) {
+                return currencyCodeCheck;
+              } else {
+                const errorMsg = `${currencyTo} is not a proper currency code`;
+                throw new Error(errorMsg);
+              }
+            });
         }
       })
       .catch((error) => {

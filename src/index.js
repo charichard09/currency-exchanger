@@ -35,7 +35,7 @@ function handleFormSubmission(event) {
     return undefined;
   }
   
-  ExchangeRateService.getExchangeRates()
+  ExchangeRateService.getExchangeRates(currencyTo)
     .then((response) => {
       if (response.result === "success") {
         const usdExchanged = exchangeUSDto(usdAmount, response.conversion_rates[currencyTo]);
