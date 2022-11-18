@@ -22,9 +22,8 @@ function handleFormSubmission(event) {
 
   ExchangeRateService.getExchangeRates()
     .then((response) => {
-      console.log("here first then")
-      // === "success"
-      if (response.result) {
+      console.log("here first then", response.result, response)
+      if (response.result === "success") {
         const usdExchanged = exchangeUSDto(usdAmount, response.conversion_rates[currenyTo]);
         printExchange(usdAmount, usdExchanged, currenyTo);
       } else {
@@ -33,7 +32,4 @@ function handleFormSubmission(event) {
     });
 }
 
-window.addEventListener("load", () => {
-  document.getElementById("convert-button").addEventListener("submit", handleFormSubmission);
-  console.log("here window")
-});
+document.getElementById("convert-form").addEventListener("submit", handleFormSubmission);
