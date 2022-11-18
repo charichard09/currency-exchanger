@@ -17,15 +17,15 @@ function printError(error) {
 function handleFormSubmission(event) {
   event.preventDefault();
   const usdAmount = document.getElementById("usd").value;
-  const currencyTo = document.getElementById("currencies").value;
+  const currencyTo = document.getElementById("currencies").value.toUpperCase();
   
   // add error checking if Object.keys(responseObj).includes(/[A-Z]/gi) === false 
-  if (isNotDataType(currencyTo, "string") && isNotDataType(usdAmount, "numberString")) {
+  if ((isNotDataType(currencyTo, "string") || currencyTo.length < 3) && isNotDataType(usdAmount, "numberString")) {
     const errorMsg = `Error: Currency is blank or does not exist. Please select a currency code to convert USD to. 
     Error: USD amount is blank. Please enter a USD amount to convert to.`;
     printError(errorMsg);
     return undefined;
-  } else if (isNotDataType(currencyTo, "string")) {
+  } else if (isNotDataType(currencyTo, "string") || currencyTo.length < 3) {
     const errorMsg = "Error: Currency is blank or does not exist. Please select a currency code to convert USD to.";
     printError(errorMsg);
     return undefined;
