@@ -6,8 +6,6 @@ import exchangeUSDto from './js/exchange-USD-to.js';
 
 //UI Logic
 function printExchange(usdAmount, usdExchanged, currenyTo) {
-  // pass conversion rate number i.e. 3.6725 to exchangeUSDto
-  // const usdExchanged = exchangeUSDto(usd, conversionArray[1])
   document.getElementById("showResponse").innerText = `${usdAmount} USD is ${usdExchanged} ${currenyTo}`;
 }
 
@@ -16,10 +14,11 @@ function printError(error) {
 }
 
 function handleFormSubmission(event) {
+  console.log("here form")
   event.preventDefault();
   const usdAmount = parseInt(document.getElementById("usd").value);
   const currenyTo = document.getElementById("currencies").value;
-  console.log("here form")
+  
 
   ExchangeRateService.getExchangeRates()
     .then((response) => {
@@ -34,5 +33,7 @@ function handleFormSubmission(event) {
     });
 }
 
-document.getElementById("convert-button").addEventListener("submit", handleFormSubmission);
-console.log("here window")
+window.addEventListener("load", () => {
+  document.getElementById("convert-button").addEventListener("submit", handleFormSubmission);
+  console.log("here window")
+});
