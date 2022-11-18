@@ -14,7 +14,6 @@ function printError(error) {
 }
 
 function handleFormSubmission(event) {
-  console.log("here form")
   event.preventDefault();
   const usdAmount = parseInt(document.getElementById("usd").value);
   const currenyTo = document.getElementById("currencies").value;
@@ -22,7 +21,6 @@ function handleFormSubmission(event) {
 
   ExchangeRateService.getExchangeRates()
     .then((response) => {
-      console.log("here first then", response.result, response)
       if (response.result === "success") {
         const usdExchanged = exchangeUSDto(usdAmount, response.conversion_rates[currenyTo]);
         printExchange(usdAmount, usdExchanged, currenyTo);
