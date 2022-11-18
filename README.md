@@ -37,6 +37,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 * _{Give input to get output} i.e. Select your toppings and hit Add Pizza to get a total_
 
 * _Alternatively:_
+* _Insructions on how to get API key and add to program here_
 * _Clone repo to a local directory_
 download node?
 * _Installing all packages with $ npm install._
