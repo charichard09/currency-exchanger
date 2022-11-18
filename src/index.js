@@ -1,7 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import ExchangeRateService from './services/exchage-rate-service.js';
+import ExchangeRateService from './services/exchange-rate-service.js';
 import exchangeUSDto from './js/exchange-USD-to.js';
 
 //UI Logic
@@ -17,13 +17,15 @@ function printError(error) {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  const usdAmount = document.getElementById("usd").value;
+  const usdAmount = parseInt(document.getElementById("usd").value);
   const currenyTo = document.getElementById("currencies").value;
+  console.log("here form")
 
   ExchangeRateService.getExchangeRates()
-  // work on here
     .then((response) => {
-      if (response.result === "success") {
+      console.log("here first then")
+      // === "success"
+      if (response.result) {
         const usdExchanged = exchangeUSDto(usdAmount, response.conversion_rates[currenyTo]);
         printExchange(usdAmount, usdExchanged, currenyTo);
       } else {
@@ -33,3 +35,4 @@ function handleFormSubmission(event) {
 }
 
 document.getElementById("convert-button").addEventListener("submit", handleFormSubmission);
+console.log("here window")

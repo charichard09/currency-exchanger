@@ -13,27 +13,29 @@
     </pre>
   </div>
 
-    <div class="row">
+    <div class="form-div">
       <form id="convert-form">
-        <div class="col-6">
-          <label for="usd">Enter a USD:</label>
-          <input id="usd" type="number" name="usd">
+        <div class="row">
+          <div class="col-3">
+            <label for="usd">Enter a USD:</label>
+            <input id="usd" type="number" name="usd">
+          </div>
+          <div class="col-2">
+            <label for="currencies" class="col-4 col-form-label">Currencies</label>
+            <select id="currencies" name="currencies" class="custom-select">
+              <option value="AUD">Australian dollar</option>
+              <option value="EUR">Euro</option>
+              <option value="JPY">Japanese yen</option>
+              <option value="CAD">Canadian dollar</option>
+              <option value="CNY">Chinese yuan</option>
+              <option value=""></option checked>
+            </select>
+          </div>
         </div>
-        <div class="col-6">
-          <label for="currencies" class="col-4 col-form-label">Currencies</label>
-          <select id="currencies" name="currencies" class="custom-select">
-            <option value="AUD">Australian dollar</option>
-            <option value="EUR">Euro</option>
-            <option value="JPY">Japanese yen</option>
-            <option value="CAD">Canadian dollar</option>
-            <option value="CNY">Chinese yuan</option>
-            <option value=""></option checked>
-          </select>
-        </div>
-    </div>
 
       <button type="submit" class="btn-success" id="convert-button">Convert</button>
-    </form>
+      </form>
+    </div>
 
     <div id="response-div">
       <p id="showResponse"></p>

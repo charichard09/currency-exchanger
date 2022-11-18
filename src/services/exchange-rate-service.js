@@ -1,5 +1,6 @@
 export default class ExchangeRateService {
   static getExchangeRates() {
+    console.log("here exchange")
     return fetch(`https://v6.exchangerate-api.com/v6/${process.env.APP_KEY}/latest/USD`)
       .then((response) => {
         if (!response.ok) {
