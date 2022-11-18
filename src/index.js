@@ -19,17 +19,20 @@ function handleFormSubmission(event) {
   const usdAmount = document.getElementById("usd").value;
   const currencyTo = document.getElementById("currencies").value;
   
-
-  if (isNotDataType(currencyTo, "string")) {
-    const errorMsg = "Currency is blank. Please select a currency to convert USD to.";
+  if (isNotDataType(currencyTo, "string") && isNotDataType(usdAmount, "numberString")) {
+    const errorMsg = `Error: Currency is blank or does not exist. Please select a currency to convert USD to. 
+    Error: USD amount is blank. Please enter a USD amount to convert to.`;
+    printError(errorMsg);
+    return undefined;
+  } else if (isNotDataType(currencyTo, "string")) {
+    const errorMsg = "Error: Currency is blank or does not exist. Please select a currency to convert USD to.";
     printError(errorMsg);
     return undefined;
   } else if (isNotDataType(usdAmount, "numberString")) {
-    const errorMsg = "USD amount is blank. Please enter a USD amount to convert to.";
+    const errorMsg = "Error: USD amount is blank. Please enter a USD amount to convert to.";
     printError(errorMsg);
     return undefined;
   }
-  
   
   ExchangeRateService.getExchangeRates()
     .then((response) => {

@@ -3,24 +3,22 @@
 <head>
   <title>Currency Exchange</title>
 </head>
-<body>
+<body class="jumbotron">
 
   <div class="container">
     <h1>Currency Exchange!</h1>
     <p>input USD then convert to dropdown of your choice:</p>
-    <pre>
-      55 Japanese yen
-    </pre>
   </div>
 
-    <div class="form-div">
-      <form id="convert-form">
-        <div class="row">
-          <div class="col-3">
+  <div class="row">
+    <div id="form-div" class="col-6">
+      <div class="row">
+        <form id="convert-form">
+          <div class="col-6">
             <label for="usd">Enter a USD:</label>
             <input id="usd" type="number" name="usd">
           </div>
-          <div class="col-2">
+          <div class="col-6">
             <label for="currencies" class="col-4 col-form-label">Currencies</label>
             <select id="currencies" name="currencies" class="custom-select">
               <option value="AUD">Australian dollar</option>
@@ -31,15 +29,26 @@
               <option value=""></option checked>
             </select>
           </div>
-        </div>
-
-      <button type="submit" class="btn-success" id="convert-button">Convert</button>
+      </div>
+        <button type="submit" class="btn-success" id="convert-button">Convert</button>
       </form>
     </div>
 
-    <div id="response-div">
-      <p id="showResponse"></p>
+    <div id="currency-codes" class="col-6">
+      <ul>
+        <li>AUD Australian dollar</li>
+        <li>EUR Euro</li>
+        <li>JPY Japanese yen</li>
+        <li>CAD Canadian dollar</li>
+        <li>CNY Chinese yuan</li>
+      </ul>
     </div>
+
+  </div>
+
+  <div id="response-div">
+    <p id="showResponse"></p>
+  </div>
 
 </body>
 </html>
