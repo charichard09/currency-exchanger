@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>CUrrency Exchange</title>
+  <title>Currency Exchange</title>
 </head>
 <body>
 
@@ -9,14 +9,35 @@
     <h1>Currency Exchange!</h1>
     <p>input USD then convert to dropdown of your choice:</p>
     <pre>
-      55 Yen
+      55 Japanese yen
     </pre>
-    <form id="convert-form">
-      <label for="usd">Enter a USD:</label>
-      <input id="usd" type="number" name="usd">
+  </div>
+
+    <div class="row">
+      <form id="convert-form">
+        <div class="col-6">
+          <label for="usd">Enter a USD:</label>
+          <input id="usd" type="number" name="usd">
+        </div>
+        <div class="col-6">
+          <label for="currencies" class="col-4 col-form-label">Currencies</label>
+          <select id="currencies" name="currencies" class="custom-select">
+            <option value="AUD">Australian dollar</option>
+            <option value="EUR">Euro</option>
+            <option value="JPY">Japanese yen</option>
+            <option value="CAD">Canadian dollar</option>
+            <option value="CNY">Chinese yuan</option>
+            <option value=""></option checked>
+          </select>
+        </div>
+    </div>
+
       <button type="submit" class="btn-success" id="convert-button">Convert</button>
     </form>
-    <p id="showResponse"></p>
-  </div>
+
+    <div id="response-div">
+      <p id="showResponse"></p>
+    </div>
+
 </body>
 </html>
