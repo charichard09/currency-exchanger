@@ -14,28 +14,22 @@
     <div id="form-div" class="col-5">
       <div class="row">
         <form id="convert-form">
-          <div class="col-6">
-            <p>input USD then convert to dropdown of your choice:</p>
+          <div class="col">
+            <p>input USD amount then enter currency code to convert to:</p>
             <label for="usd">Enter a USD:</label>
             <input id="usd" type="number" name="usd">
           </div>
-          <div class="col-6">
-            <label for="currencies" class="col-4 col-form-label">Currencies</label>
-            <select id="currencies" name="currencies" class="custom-select">
-              <option value="AUD">Australian dollar</option>
-              <option value="EUR">Euro</option>
-              <option value="JPY">Japanese yen</option>
-              <option value="CAD">Canadian dollar</option>
-              <option value="CNY">Chinese yuan</option>
-              <option value=""></option checked>
-            </select>
+          <div class="col">
+            <label for="currencies" class="col-4 col-form-label">Currency Code:</label>
+            <input id="currencies" name="currencies" type="text">
           </div>
+          <button type="submit" class="btn-success" id="convert-button">Convert</button>
+        </form>
       </div>
-        <button type="submit" class="btn-success" id="convert-button">Convert</button>
-      </form>
     </div>
 
     <div id="currency-codes" class="col-7">
+      <span>Here is a list of 25 currency codes to choose from, but this application supports all 161 commonly circulating world currency codes.</span>
       <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -47,7 +41,7 @@
         <tbody>
           <tr>
             <th scope="row">AUD</th>
-            <td>Australian Dollar</td>
+            <td>Australian dollar</td>
             <td>Australia</td>
           </tr>
           <tr>
@@ -57,18 +51,118 @@
           </tr>
           <tr>
             <th scope="row">JPY</th>
-            <td>Japanese Yen</td>
+            <td>Japanese yen</td>
             <td>Japan</td>
           </tr>
           <tr>
             <th scope="row">CAD</th>
-            <td>Canadian Dollar</td>
+            <td>Canadian dollar</td>
             <td>Canada</td>
           </tr>
           <tr>
             <th scope="row">CNY</th>
-            <td>Chinese Renminbi</td>
+            <td>Chinese renminbi</td>
             <td>China</td>
+          </tr>
+          <tr>
+            <th scope="row">GBP</th>
+            <td>Sterling</td>
+            <td>United Kingdom</td>
+          </tr>
+          <tr>
+            <th scope="row">CHF</th>
+            <td>Swiss franc</td>
+            <td>Switzerland</td>
+          </tr>
+          <tr>
+            <th scope="row">HKD</th>
+            <td>Hong Kong dollar</td>
+            <td>Hong Kong</td>
+          </tr>
+          <tr>
+            <th scope="row">SGD</th>
+            <td>Singapore dollar</td>
+            <td>Singapore</td>
+          </tr>
+          <tr>
+            <th scope="row">SEK</th>
+            <td>Swedish krona</td>
+            <td>Sweden</td>
+          </tr>
+          <tr>
+            <th scope="row">KRW</th>
+            <td>South Korean won</td>
+            <td>South Korea</td>
+          </tr>
+          <tr>
+            <th scope="row">NOK</th>
+            <td>Norwegian krone</td>
+            <td>Kingdom of Norway</td>
+          </tr>
+          <tr>
+            <th scope="row">NZD</th>
+            <td>New Zealand dollar</td>
+            <td>New Zealand</td>
+          </tr>
+          <tr>
+            <th scope="row">INR</th>
+            <td>Indian rupee</td>
+            <td>India</td>
+          </tr>
+          <tr>
+            <th scope="row">MXN</th>
+            <td>Mexican peso</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <th scope="row">TWD</th>
+            <td>New Taiwan dollar</td>
+            <td>Taiwan</td>
+          </tr>
+          <tr>
+            <th scope="row">ZAR</th>
+            <td>South African rand</td>
+            <td>Southern African Common Monetary Area</td>
+          </tr>
+          <tr>
+            <th scope="row">BRL</th>
+            <td>Brazilian real</td>
+            <td>Brazil</td>
+          </tr>
+          <tr>
+            <th scope="row">DKK</th>
+            <td>Danish krone</td>
+            <td>Denmark</td>
+          </tr>
+          <tr>
+            <th scope="row">PLN</th>
+            <td>Polish złoty</td>
+            <td>Poland</td>
+          </tr>
+          <tr>
+            <th scope="row">THB</th>
+            <td>Thai baht</td>
+            <td>Thailand</td>
+          </tr>
+          <tr>
+            <th scope="row">ILS</th>
+            <td>Israeli new shekel</td>
+            <td>Israel</td>
+          </tr>
+          <tr>
+            <th scope="row">IDR</th>
+            <td>Indonesian rupiah</td>
+            <td>Indonesia</td>
+          </tr>
+          <tr>
+            <th scope="row">CZK</th>
+            <td>Czech koruna</td>
+            <td>Czech Republic</td>
+          </tr>
+          <tr>
+            <th scope="row">AED</th>
+            <td>UAE dirham</td>
+            <td>United Arab Emirates</td>
           </tr>
         </tbody>
       </table>
