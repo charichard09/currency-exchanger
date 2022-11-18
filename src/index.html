@@ -7,7 +7,6 @@
 
   <div id="header-div" class="container-fluid">
     <span class="header-title">Currency Exchange!</span>
-    
   </div>
 
   <div class="row">
@@ -17,7 +16,7 @@
           <div class="col">
             <p>input USD amount then enter currency code to convert to:</p>
             <label for="usd">Enter a USD:</label>
-            <input id="usd" type="number" name="usd">
+            <input id="usd" type="number" name="usd" min="0" value="0">
           </div>
           <div class="col">
             <label for="currencies" class="col-4 col-form-label">Currency Code:</label>
@@ -25,6 +24,10 @@
           </div>
           <button type="submit" class="btn-success" id="convert-button">Convert</button>
         </form>
+      </div>
+
+      <div id="response-div">
+        <p id="showResponse"></p>
       </div>
     </div>
 
@@ -168,10 +171,5 @@
       </table>
     </div>
   </div>
-
-  <div id="response-div">
-    <p id="showResponse"></p>
-  </div>
-
 </body>
 </html>
