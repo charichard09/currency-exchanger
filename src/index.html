@@ -5,16 +5,17 @@
 </head>
 <body class="jumbotron">
 
-  <div class="container">
-    <h1>Currency Exchange!</h1>
-    <p>input USD then convert to dropdown of your choice:</p>
+  <div id="header-div" class="container-fluid">
+    <span class="header-title">Currency Exchange!</span>
+    
   </div>
 
   <div class="row">
-    <div id="form-div" class="col-6">
+    <div id="form-div" class="col-5">
       <div class="row">
         <form id="convert-form">
           <div class="col-6">
+            <p>input USD then convert to dropdown of your choice:</p>
             <label for="usd">Enter a USD:</label>
             <input id="usd" type="number" name="usd">
           </div>
@@ -34,16 +35,44 @@
       </form>
     </div>
 
-    <div id="currency-codes" class="col-6">
-      <ul>
-        <li>AUD Australian dollar</li>
-        <li>EUR Euro</li>
-        <li>JPY Japanese yen</li>
-        <li>CAD Canadian dollar</li>
-        <li>CNY Chinese yuan</li>
-      </ul>
+    <div id="currency-codes" class="col-7">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th><strong>Currency Code</strong></th>
+            <th><strong>Currency Name</strong></th>
+            <th><strong>Country</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">AUD</th>
+            <td>Australian Dollar</td>
+            <td>Australia</td>
+          </tr>
+          <tr>
+            <th scope="row">EUR</th>
+            <td>Euro</td>
+            <td>European Union</td>
+          </tr>
+          <tr>
+            <th scope="row">JPY</th>
+            <td>Japanese Yen</td>
+            <td>Japan</td>
+          </tr>
+          <tr>
+            <th scope="row">CAD</th>
+            <td>Canadian Dollar</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <th scope="row">CNY</th>
+            <td>Chinese Renminbi</td>
+            <td>China</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
   </div>
 
   <div id="response-div">
