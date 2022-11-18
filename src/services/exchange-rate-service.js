@@ -6,7 +6,7 @@ export default class ExchangeRateService {
           const errorMessage = `Error: ${response.result} ${response["error-type"]}`;
           throw new Error(errorMessage);
         } else {
-          response.json();
+          return response.json();
         }
       })
       .catch((error) => {
