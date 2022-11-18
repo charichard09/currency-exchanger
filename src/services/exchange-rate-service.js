@@ -3,8 +3,11 @@ export default class ExchangeRateService {
     return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`)
       .then((response) => {
         if (!response.ok) {
-          const errorMessage = `Error: ${response.result} ${response["error-type"]}`;
-          throw new Error(errorMessage);
+          return response.json()
+            .then((apiErrorMsg) => {
+              const errorMessage = `${response.status} ${response.statusText} ${apiErrorMsg["error-type"]}`;
+              throw new Error(errorMessage);
+            });
         } else {
           return response.json();
         }
