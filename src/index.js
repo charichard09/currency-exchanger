@@ -1,32 +1,35 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import ExchangeService './js/exchage-rate-service.js'
-import convertUSD './js/convert-USD.js'
+import ExchangeRateService from './services/exchage-rate-service.js';
+import exchangeUSDto from './js/exchange-USD-to.js';
 
 //UI Logic
-function printExchange(conversionArray) {
-  const usdExchanged = exchangeUSDto(conversionArray)
-  document.getElementById("showResponse").innerText = response
+function printExchange(usdAmount, usdExchanged, currenyTo) {
+  // pass conversion rate number i.e. 3.6725 to exchangeUSDto
+  // const usdExchanged = exchangeUSDto(usd, conversionArray[1])
+  document.getElementById("showResponse").innerText = `${usdAmount} USD is ${usdExchanged} ${currenyTo}`;
 }
 
 function printError(error) {
-  console.log()
+  document.getElementById("showResponse").innerText = error;
 }
 
 function handleFormSubmission(event) {
   event.preventDefault();
   const usdAmount = document.getElementById("usd").value;
-  const dietaryNeed = document.getElementById("diet-pref").value;
+  const currenyTo = document.getElementById("currencies").value;
 
-  ExchangeRateService.getExchange(usdAmount)
+  ExchangeRateService.getExchangeRates()
+  // work on here
     .then((response) => {
       if (response.result === "success") {
-        printExchange(response);
+        const usdExchanged = exchangeUSDto(usdAmount, response.conversion_rates[currenyTo]);
+        printExchange(usdAmount, usdExchanged, currenyTo);
       } else {
         printError(response);
       }
     });
 }
 
-document.getElementById("meal-planner").addEventListener("submit", handleFormSubmission);
+document.getElementById("convert-button").addEventListener("submit", handleFormSubmission);
