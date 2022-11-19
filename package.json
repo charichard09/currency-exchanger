@@ -2,7 +2,7 @@
   "name": "currency-exchanger",
   "version": "1.0.0",
   "repository": {
-    "url": "git+https://github.com/{USERNAME}/{REPONAME}.git"
+    "url": "git+https://github.com/charichard09/currency-exchanger.git"
   },
   "description": "",
   "main": "index.js",
