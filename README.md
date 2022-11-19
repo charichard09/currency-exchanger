@@ -19,7 +19,7 @@
 ## Description
 
 _This application will convert the United States dollar (USD) to any of 161 commonly circulating currencies. The user inputs an amount in USD in the first field, then the currency code of another currency in the second field, clicks convert, and 
-will be shown the exchanged USD to currency amount. 25 currency codes are also provided for example.
+will be shown the exchanged USD to currency amount. 25 currency codes are also provided for example._
 
 ## Setup/Installation Requirements
 
@@ -28,14 +28,14 @@ will be shown the exchanged USD to currency amount. 25 currency codes are also p
 * _Input a USD amount_
 * _Input a currency code (examples shown on the right)_
 * _Click convert to see exchange from USD to currency code_
-_
+
 * _Alternatively:_
 * _Install Node.js:_
 * [OS X and Windows Instructions](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)
 * _Clone this repo to a local directory_
 * _Visit the [ExchangeRate-API site](https://www.exchangerate-api.com/) and enter your email address to get a free API key._
 * _Create an account, check your email to activate your account, then login and find your API key on the Dashboard or under API Keys on the left sidebar_
-* _Navigate to the root/top of the directory of where this repo was cloned and create a .env file _
+* _Navigate to the root of the directory of where this repo was cloned and create a .env file _
 * _Type on the first line of your .env file "API_KEY={YOUR-API-Key}" without the quotes, paste the API key you received where {YOUR-API-KEY} is, and save the document_
 * _Using Terminal on OS X or PowerShell on Windows: navigate to the directory that this repo was cloned to and 
 install all packages with command $ npm install (without the $)_
