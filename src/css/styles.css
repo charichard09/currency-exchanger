@@ -1,15 +1,33 @@
 body {
   box-sizing: border-box;
   background-image: url("../images/currency-bg2.jpg");
-  background-size: 90% auto;
+  background-size: 100% auto;
   background-color: transparent;
   background-repeat: repeat;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
 }
 
+#currency-codes {
+  padding: 2%;
+  background-color: RGB(230, 187, 132, .85);
+}
+
+#form-div {
+  font-size: x-large;
+  padding: 2%;
+  background-color: RGB(203, 165, 154, .85);
+}
 
 #header-div {
   align-content: center;
-  background-color: aliceblue;
+  background-color: #358E94;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#currency-stc {
+  font-size: x-large;
 }
 
 .header-title {
