@@ -23,13 +23,6 @@ will be shown the exchanged USD to currency amount. 25 currency codes are also p
 
 ## Setup/Installation Requirements
 
-* _Go to link:_
-* [Currency Exchange Webpage](https://charichard09.github.io/currency-exchange)
-* _Input a USD amount_
-* _Input a currency code (examples shown on the right)_
-* _Click convert to see exchange from USD to currency code_
-
-* _Alternatively:_
 * _Install Node.js:_
 * [OS X and Windows Instructions](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)
 * _Clone this repo to a local directory_
