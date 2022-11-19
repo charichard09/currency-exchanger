@@ -1,9 +1,15 @@
 body {
-  background-color: lightblue;
+  box-sizing: border-box;
+  background-image: url("../images/currency-bg2.jpg");
+  background-size: 90% auto;
+  background-color: transparent;
+  background-repeat: repeat;
 }
+
 
 #header-div {
   align-content: center;
+  background-color: aliceblue;
 }
 
 .header-title {
