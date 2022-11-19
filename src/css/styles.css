@@ -33,3 +33,20 @@ body {
 .header-title {
   text-align: center;
 }
+
+#convert-button {
+  display: block;
+  margin-top: 3%;
+  margin-left: 28%;
+  line-height: 2em;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+}
+
+#response-div {
+  align-content: center;
+  font-size: x-large;
+  padding-top: 8%;
+  padding-left: 4%;
+}

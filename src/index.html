@@ -14,15 +14,15 @@
       <div class="row">
         <form id="convert-form">
           <div class="col">
-            <p>input USD amount then enter currency code to convert to:</p>
-            <label for="usd">Enter a USD:</label>
+            <p>Input USD amount, then enter currency code to convert to, and click convert.</p>
+            <label for="usd" class="col-4 col-form-label">Enter a USD:</label>
             <input id="usd" type="number" name="usd" min="0" value="0">
           </div>
           <div class="col">
             <label for="currencies" class="col-4 col-form-label">Currency Code:</label>
             <input id="currencies" name="currencies" type="text" maxlength="3">
           </div>
-          <button type="submit" class="btn-success" id="convert-button">Convert</button>
+          <button type="submit" class="btn btn-dark" id="convert-button">Convert</button>
         </form>
       </div>
 
