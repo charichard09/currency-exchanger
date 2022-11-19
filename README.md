@@ -1,15 +1,10 @@
-# _{Application Name}_
+# _Currency Exchange_
 
-#### By _**{List of contributors}**_
+#### By _**Richard Cha**_
 
-#### _{Brief description of application}_
+#### _Get the currency exchange of USD to any of 161 world currencies._
 
 ## Technologies Used
-
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
 
 * _JavaScript_
 * _HTML_
@@ -19,39 +14,39 @@
 * _Babel_
 * _Node.js_ 
 * _webpack_
+* _Postman_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This application will convert the United States dollar (USD) to any of 161 commonly circulating currencies. The user inputs an amount in USD in the first field, then the currency code of another currency in the second field, clicks convert, and 
+will be shown the exchanged USD to currency amount. 25 currency codes are also provided for example.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
 * _Go to link:_
-* [name](https://charichard09.github.io/name)
-* _{Give input to get output} i.e. Select your toppings and hit Add Pizza to get a total_
-
+* [Currency Exchange Webpage](https://charichard09.github.io/currency-exchange)
+* _Input a USD amount_
+* _Input a currency code (examples shown on the right)_
+* _Click convert to see exchange from USD to currency code_
+_
 * _Alternatively:_
-* _Insructions on how to get API key and add to program here_
-* _Clone repo to a local directory_
-download node?
-* _Installing all packages with $ npm install._
-* _Building the project using webpack with $ npm run build_
-* _Starting a development server with $ npm run start_
-* _Linting JS files in the src folder with $ npm run lint_
-* _Running tests with Jest using $ npm run test_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* _Install Node.js:_
+* [OS X and Windows Instructions](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)
+* _Clone this repo to a local directory_
+* _Visit the [ExchangeRate-API site](https://www.exchangerate-api.com/) and enter your email address to get a free API key._
+* _Create an account, check your email to activate your account, then login and find your API key on the Dashboard or under API Keys on the left sidebar_
+* _Navigate to the root/top of the directory of where this repo was cloned and create a .env file _
+* _Type on the first line of your .env file "API_KEY={YOUR-API-Key}" without the quotes, paste the API key you received where {YOUR-API-KEY} is, and save the document_
+* _Using Terminal on OS X or PowerShell on Windows: navigate to the directory that this repo was cloned to and 
+install all packages with command $ npm install (without the $)_
+* _Confirm all files in the src folder have 0 errors by running command $ npm run lint_
+* _Confirm all business logic tests pass with Jest by running command $ npm run test_
+* _Build the project using webpack with command $ npm run build_
+* _Start a development server which will open a locally hosted live version of this Currency Exchange with $ npm run start_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _None_
 
 ## License
 
@@ -77,4 +72,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) _11-18-22_ _Richard Cha_
